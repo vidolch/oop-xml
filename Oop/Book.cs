@@ -6,18 +6,14 @@ namespace Oop
     [XmlType(TypeName = "book")]
     public class Book
     {
-
         public Title Title { get; set; }
         [XmlElement(ElementName = "author")]
         public string Author { get; set; }
+        [XmlElement(ElementName = "year")]
         public string Year { get; set; }
+        [XmlElement(ElementName = "price")]
         public string Price { get; set; }
-        [XmlAttribute]
-        public Category Category { get; set; }
-        public void PrintInfo()
-        {
-            Console.WriteLine(Title.Value);
-            Console.WriteLine(Author);
-        }
+        [XmlAttribute(AttributeName = "category")]
+        public string Category { get; set; }
     }
 }
